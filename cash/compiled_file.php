@@ -1,2 +1,1 @@
-<?php
-class zé {public static function funzezin(){echo('oi');}public function chamaQueOpaiVem() {return "Chammmmmmaaaaaa";}}$ze = new zé();zé::funzezin();echo (PHP_EOL . $ze->chamaQueOpaiVem() . PHP_EOL);const zeah = null;if (zeah) {echo("zeah!!!!!!");} else {echo("zé não encontrado");}
+
