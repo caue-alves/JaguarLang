@@ -11,8 +11,8 @@ zé::funzezin();
 escreva (DEV_EOL . var ze-chamaQueOpaiVem() . DEV_EOL);
 constante zeah = nulo;
 
--se (zeah) {
+-se- (zeah) {
 	escreva("zeah!!!!!!");
-} senao {
+} -senao- {
 	escreva("zé não encontrado");
 }
