@@ -3,5 +3,5 @@
 </h1>
 <p align=center>
   <img src = "https://github.com/caue-alves/Linguagem-Jaguar/blob/master/img/jaguar.png?raw=true">
-  </p>
 Um projeto de linguagem compilada, orientada a objetos e de baixo nível
+    </p>
