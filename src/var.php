@@ -1,6 +1,6 @@
 <?php
 
-Class Varable
+Class Variable
 {
 	private $name;
 	private $hash;
@@ -11,7 +11,7 @@ Class Varable
 		$this->name = $thisName;
 		$this->hash = self::generateId();
 		$this->value = $thisValue;
-        $create = fopen("../cash/logs/" . $this->hash . ".jlov", "w");
+        $create = fopen("../cash/logs/" . $this->hash . ".jlos", "w");
         fwrite($create, $this->value);
 
 	}
@@ -50,3 +50,5 @@ Class Varable
 	
 	
 }
+
+$var = new Variable('var', '872334');

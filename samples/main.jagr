@@ -12,14 +12,12 @@ var int_ex = 123;
 !< Variável Float >!
 var float_ex = 134.67;
 
-!< Variável constante >!
-var uma_constante = 123;
 
 !< Condicional >!
--se-(var uma_constante == 123) {
-	escreva(var uma_constante . JAGR_EOL);
+-se-(var int_ex == 123) {
+	escreva(var int_ex . JAGR_EOL);
 } -senao- {
-	escreva('constante não encontrada. JAGR_EOL');
+	escreva('int não encontrado. JAGR_EOL');
 }
 
 !< Classe >!
