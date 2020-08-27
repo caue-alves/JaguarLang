@@ -1,0 +1,18 @@
+classe zé {
+	publica estatica funcao funzezin(){
+		escreva('oi');
+	}
+	publica funcao chamaQueOpaiVem() {
+		retorne "Chammmmmmaaaaaa";
+	}
+}
+var ze = novo zé();
+zé::funzezin();
+escreva (DEV_EOL . var ze-chamaQueOpaiVem() . DEV_EOL);
+constante zeah = nulo;
+
+-se (zeah) {
+	escreva("zeah!!!!!!");
+} senao {
+	escreva("zé não encontrado");
+}
