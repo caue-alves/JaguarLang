@@ -3,7 +3,7 @@
 </h1>
 <p align=center>
   <img src = "https://github.com/caue-alves/Linguagem-Jaguar/blob/master/img/jaguar.png?raw=true">
-Um projeto de linguagem compilada, orientada a objetos e de baixo nível<br><br>
+Um projeto de linguagem compilada, orientada a objetos e de alto nível<br><br>
   
   
 <img alt="GitHub" src="https://img.shields.io/github/license/caue-alves/Linguagem-Jaguar">
