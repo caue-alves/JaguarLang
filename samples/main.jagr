@@ -1,18 +1,41 @@
-classe zé {
-	publica estatica funcao funzezin(){
-		escreva('oi');
-	}
-	publica funcao chamaQueOpaiVem() {
-		retorne "Chammmmmmaaaaaa";
-	}
-}
-var ze = novo zé();
-zé::funzezin();
-escreva (DEV_EOL . var ze-chamaQueOpaiVem() . DEV_EOL);
-constante zeah = nulo;
+!< Comentário >!
 
--se- (zeah) {
-	escreva("zeah!!!!!!");
+!< Variável Booleana >!
+var bool_ex = verdadeiro;
+
+!< Variável string >!
+var str_ex = "olá";
+
+!< Variável int >!
+var int_ex = 123;
+
+!< Variável Float >!
+var float_ex = 134.67;
+
+!< Variável constante >!
+var uma_constante = 123;
+
+!< Condicional >!
+-se-(var uma_constante == 123) {
+	escreva(var uma_constante . JAGR_EOL);
 } -senao- {
-	escreva("zé não encontrado");
+	escreva('constante não encontrada. JAGR_EOL');
 }
+
+!< Classe >!
+Classe Mamifero
+{
+	publica funcao _init(var idade)
+	{
+		var o_mesmo-idade = var idade;
+	}
+
+	publica funcao vc_anda()
+	{
+		retorne verdadeiro;
+	}
+}
+
+!< Criar classe >!
+var Cachorro = new Mamifero(20);
+escreva(var Cachorro-vc_anda() . JAGR_EOL);
