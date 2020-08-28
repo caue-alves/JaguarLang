@@ -80,3 +80,10 @@ Resultado da execução através do comando `php __main__.php`
 
 # Observação
 Nas variáveis, especificar o tipo não é necessário, apenas usamos os nomes de `str_ex`, `int_ex`, etc, para exemplificar, mas o nome `var` é crucial antes da declaração da variável
+
+# Palavras-Chave
+- `JAGR_EOL`: Fim de linha
+- `-`: Chamar método de classe
+- `_init`: Construtor
+- `-se-`: Condicional
+- `-senao-`: Realizada se o `-se-` não for cumprido
