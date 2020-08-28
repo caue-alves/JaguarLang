@@ -19,7 +19,7 @@ A linguagem Jaguar é uma linguagem de scripts baseada e interpretada em PHP. O 
 
 # Variáveis
 
-Uma nova estrutura de variáveis não-baseada em PHP está sendo desenvolvida, onde é criada uma classe `Variable` e suas informações são inseridas no arquivo de sufixo `*.jlos`(<strong>J</strong>aguar <strong>V</strong>ariable <strong>LO</strong>cal<strong> S</strong>torage ) 
+Uma nova estrutura de variáveis não-baseada em PHP está sendo desenvolvida, onde é criada uma classe `Variable` e suas informações são inseridas no arquivo de sufixo `*.jls`(**J**aguar **V**ariable **L**ocal **S**torage ) 
 
 # Exemplos
 
