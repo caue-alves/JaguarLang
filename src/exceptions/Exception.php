@@ -9,7 +9,7 @@ Class CompileException extends Exception
 		parent::__construct($message, $code, $previous);
 	}
 
-	public function AdminMail()
+	public static function AdminMail()
 	{
 		return 'caue.mendes.rodrigues.alves@gmail.com';
 	}

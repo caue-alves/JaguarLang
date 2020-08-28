@@ -1,5 +1,6 @@
 <?php
 require_once "exceptions/Exception.php";
+require_once "exceptions/IssoNaoEphp.php";
 
 $arqpath = '../cash/compiled_file.php';
 
@@ -41,11 +42,26 @@ $varex = $alphabet[$varex];
     "/!</" => "/*",
     "/>!/" => "*/",
     "/_init/" => "__construct",
-    "/o_mesmo/" => "this"
+    "/o_mesmo/" => "this",
+    "/_destrua/" => "__destruct",
+    "/tente/" => "try",
+    "/capture/" => "catch",
+    "/para_cada/" => "foreach",
+    "/para/" => "for",
+    "/enquanto/" => "while",
+    "/levante/" => "throw",
+    "/exiba_variavel/" => "var_dump",
+    "/:/" => "=>"
  ];
 
  foreach($keywords_and_substitutes as $key => $subs) {
   	try{
+        if (strpos($subs . "\x20", $str_compilada) != 0){
+            echo $subs . "\x20";
+            echo "Foi encontrado um ". $subs . "|" . PHP_EOL;
+            throw new IssoNaoEphp("Erro Fatal: IssoNaoEphp: Peraí, não é por que é uma linguagem de scripts baseada em php que você pode abusar né?");
+        } 
+
  		if (preg_match($key, $str_compilada) == 1 or preg_match("/;" . substr($key, 1), $str_compilada)) {
  			$str_compilada = str_ireplace(substr($key, 1, strlen($key) - 2), $subs, $str_compilada);
  		} 
