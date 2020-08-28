@@ -74,9 +74,31 @@ Instanciar classe
 var Cachorro = new Mamifero(20);
 escreva(var Cachorro-vc_anda() . JAGR_EOL);
 ```
-Resultado da execução através do comando `php __main__.php` 
-
-<img src="https://github.com/caue-alves/Linguagem-Jaguar/blob/master/img/jag.png?raw=true">
+Tratamento de Erros:
+```
+tente {
+	!<...Cógigo>!
+} capture (excecao var e) {
+	escreva("excessão capturada");
+}
+```
+Laço `foreach`
+```
+var array = [];
+para_cada(var array as var a) {
+	escreva(var a);
+}
+```
+Laço `while`
+```
+var bool = falso
+enquanto(var bool == falso) {
+	escreva ("falsooo");
+	if (100 == 100) {
+		var bool = verdadeiro;
+	}
+}
+```
 
 # Observação
 Nas variáveis, especificar o tipo não é necessário, apenas usamos os nomes de `str_ex`, `int_ex`, etc, para exemplificar, mas o nome `var` é crucial antes da declaração da variável
