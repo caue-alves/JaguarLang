@@ -12,7 +12,7 @@ var int_ex = 123;
 !< Variável Float >!
 var float_ex = 134.67;
 
-
+  
 !< Condicional >!
 -se-(var int_ex == 123) {
 	escreva(var int_ex . JAGR_EOL);
@@ -21,7 +21,7 @@ var float_ex = 134.67;
 }
 
 !< Classe >!
-Classe Mamifero
+Classe Mamero
 {
 	publica funcao _init(var idade)
 	{
@@ -35,5 +35,5 @@ Classe Mamifero
 }
 
 !< Criar classe >!
-var Cachorro = new Mamifero(20);
+var Cachorro = new Mamero(20);
 escreva(var Cachorro-vc_anda() . JAGR_EOL);
