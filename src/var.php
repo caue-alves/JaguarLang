@@ -11,7 +11,7 @@ Class Variable
 		$this->name = $thisName;
 		$this->hash = self::generateId();
 		$this->value = $thisValue;
-        $create = fopen("../cash/logs/" . $this->hash . ".jls", "w");
+        $create = fopen("../cash/logs/" . $this->hash . ".jvls", "w");
         fwrite($create, $this->value);
 
 	}
