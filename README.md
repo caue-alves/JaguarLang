@@ -19,7 +19,7 @@ A linguagem Jaguar é uma linguagem de scripts baseada e interpretada em PHP. O 
 
 # Variáveis
 
-Uma nova estrutura de variáveis não-baseada em PHP está sendo desenvolvida, onde é criada uma classe `Variable` e suas informações são inseridas no arquivo de sufixo `*.jvls`(**J**aguar **V**ariable **L**ocal **S**torage ) 
+Uma nova estrutura de variáveis não-baseada em PHP está sendo desenvolvida, onde é criada uma classe `Variable` e suas informações são inseridas no arquivo de sufixo `*.jvls`(**J**aguar **V**ariable **L**ocal **S**torage) 
 
 # Exemplos
 
@@ -27,25 +27,25 @@ Seguem alguns exemplos da linguagem:
 ```
 !< Comentário >!
 ```
-Variável Booleana
+Variável Booleana:
 ```
 var bool_ex = verdadeiro;
 ```
 
-Variável string
+Variável string:
 ```
 var str_ex = "olá";
 ```
-Variável int
+Variável int:
 ```
 var int_ex = 123;
 ```
 
-Variável Float
+Variável Float:
 ```
 var float_ex = 134.67;
 ```
-Condicional
+Condicional:
 ```
 -se-(var int_ex == 123) {
 	escreva(int_ex . JAGR_EOL);
@@ -54,7 +54,7 @@ Condicional
 }
 ```
 
-Classe
+Classe:
 ```
 Classe Mamifero
 {
@@ -69,7 +69,7 @@ Classe Mamifero
 	}
 }
 ```
-Instanciar classe
+Instanciar classe:
 ```
 var Cachorro = new Mamifero(20);
 escreva(var Cachorro-vc_anda() . JAGR_EOL);
