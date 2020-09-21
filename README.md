@@ -1,5 +1,5 @@
 <h1 align=center> 
-  < Linguagem Jaguar 🐯> 
+  < JaguarLang 🐯> 
 </h1>
 <p align=center>
   <img src = https://github.com/caue-alves/Linguagem-Jaguar/blob/master/.github/img/jaguar.png?raw=true"/>
