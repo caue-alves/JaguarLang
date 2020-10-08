@@ -1,39 +1,40 @@
 !< Comentário >!
 
 !< Variável Booleana >!
-var bool_ex = verdadeiro;
+@<bool_ex = @true;
 
 !< Variável string >!
-var str_ex = "olá";
+@<str_ex = "olá";
 
 !< Variável int >!
-var int_ex = 123;
+@<int_ex = 123;
 
 !< Variável Float >!
-var float_ex = 134.67;
+@<float_ex = 134.67;
 
   
 !< Condicional >!
--se-(var int_ex == 123) {
-	escreva(var int_ex . JAGR_EOL);
-} -senao- {
-	escreva('int não encontrado. JAGR_EOL');
+-if-(@<int_ex == 123) {
+	writeLine(@<int_ex . JAGR_EOL);
+}
+-else- {
+	writeLine('int não encontrado. JAGR_EOL');
 }
 
 !< Classe >!
-Classe Mamero
+class Mamifero
 {
-	publica funcao _init(var idade)
+	public func _init(@<idade)
 	{
-		var o_mesmo-idade = var idade;
+		self--idade = @<idade;
 	}
 
-	publica funcao vc_anda()
+	public func vc_anda()
 	{
-		retorne verdadeiro;
+		return @true;
 	}
 }
 
 !< Criar classe >!
-var Cachorro = new Mamero(20);
-escreva(var Cachorro-vc_anda() . JAGR_EOL);
+@<Cachorro = new Mamifero(20);
+writeLine(@<Cachorro--vc_anda() . JAGR_EOL);

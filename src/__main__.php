@@ -1,74 +1,18 @@
 <?php
 require_once "exceptions/Exception.php";
-require_once "exceptions/IssoNaoEphp.php";
+require_once "sanitizer/sanit_main.php";
+require_once "replace/symbol.php";
+require_once "replace/lang_struct.php";
+require_once "replace/funcs.php";
 
 $arqpath = '../cash/compiled_file.php';
-
 $arq = fopen($arqpath, 'w');
-$string = file('../samples/main.jagr'); 
 
-fwrite($arq, '<?php' . PHP_EOL . "require_once('../src/var.php');" . PHP_EOL . "require_once('exceptions/Exception.php');" . "require_once('exceptions/DivisaoPorZero.php');" . PHP_EOL . "try {");
-$lista_final = [];
-
-foreach($string as $str) {
-   $lista_final[] = trim($str);
- }
-
-$str_compilada = implode("", $lista_final);
-$varex = rand(0, 26);
-
-$alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-$varex = $alphabet[$varex];
-  $keywords_and_substitutes = [
-    "/-se-/" => "if",
-    "/-senao-/" => "else",
-    "/-sesenao-/" => "elseif",
-    "/escreva/" => "echo",
-    '/-/' => "->",
-    "/classe/" => "class",
-    "/extende/" => "extends",
-    "/implementa/" => "implements",
-    "/funcao/" => "function",
-    "/verdadeiro/" => "true",
-    "/falso/" => "false",
-    "/publica/" => "public",
-    "/estatica/" => "static",
-    "/novo/" => "new",
-    "/var /" => "$" . "",
-    "/retorne/" => "return",
-    "/JAGR_EOL/" => "PHP_EOL",
-    "/constante/" => "const",
-    "/nulo/" => "null",
-    "/!</" => "/*",
-    "/>!/" => "*/",
-    "/_init/" => "__construct",
-    "/o_mesmo/" => "this",
-    "/_destrua/" => "__destruct",
-    "/tente/" => "try",
-    "/capture/" => "catch",
-    "/para_cada/" => "foreach",
-    "/para/" => "for",
-    "/enquanto/" => "while",
-    "/levante/" => "throw",
-    "/exiba_variavel/" => "var_dump",
-    "/:/" => "=>"
- ];
-
- foreach($keywords_and_substitutes as $key => $subs) {
-  	try{
-        if (strpos($subs . "\x20", $str_compilada) != 0){
-            echo $subs . "\x20";
-            echo "Foi encontrado um ". $subs . "|" . PHP_EOL;
-            throw new IssoNaoEphp("Erro Fatal: IssoNaoEphp: Peraí, não é por que é uma linguagem de scripts baseada em php que você pode abusar né?");
-        } 
-
- 		if (preg_match($key, $str_compilada) == 1 or preg_match("/;" . substr($key, 1), $str_compilada)) {
- 			$str_compilada = str_ireplace(substr($key, 1, strlen($key) - 2), $subs, $str_compilada);
- 		} 
- 	} catch(CompileException $e) {
- 		echo $e->getMessage();
-  }
- }
+sanitize_one();
+$str_compilada = sanitize_two("../samples/main.jagr");
+$str_compilada = replace_sym($str_compilada);
+$str_compilada = structs($str_compilada);
+$str_compilada = funcs($str_compilada);
 
 fwrite($arq, $str_compilada);
 fwrite($arq,'

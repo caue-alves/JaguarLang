@@ -1,0 +1,8 @@
+!< Funçoes principais da linguagem Jaguar>!
+
+funcao retorna_array() {
+	retorne [
+	"nome" : "Cauê",
+	"idade" : 11
+	];
+}
