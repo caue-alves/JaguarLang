@@ -3,9 +3,7 @@
 </h1>
 <p align=center>
   <img src = https://github.com/caue-alves/Linguagem-Jaguar/blob/master/.github/img/jaguar.png?raw=true"/>
-A project of a compiled and high level language
-  
-  
+A project of a compiled and high level language  
 <img alt="GitHub" src="https://img.shields.io/github/license/caue-alves/Linguagem-Jaguar?color=green">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/caue-alves/Linguagem-Jaguar?color=informational">
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/caue-alves/Linguagem-Jaguar?color=9cf"><br>
