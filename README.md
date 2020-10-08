@@ -3,7 +3,7 @@
 </h1>
 <p align=center>
   <img src = https://github.com/caue-alves/Linguagem-Jaguar/blob/master/.github/img/jaguar.png?raw=true"/>
-<h2>A project of a compiled and high level language<h2>  									
+A project of a compiled and high level language									
 <br><br>
 <img alt="GitHub" src="https://img.shields.io/github/license/caue-alves/Linguagem-Jaguar?color=green">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/caue-alves/Linguagem-Jaguar?color=informational">
