@@ -3,7 +3,7 @@
 </h1>
 <p align=center>
   <img src = https://github.com/caue-alves/Linguagem-Jaguar/blob/master/.github/img/jaguar.png?raw=true"/>
-Um projeto de linguagem compilada, orientada a objetos e de alto nível<br><br>
+A project of a compiled and high level language
   
   
 <img alt="GitHub" src="https://img.shields.io/github/license/caue-alves/Linguagem-Jaguar?color=green">
@@ -13,73 +13,73 @@ Um projeto de linguagem compilada, orientada a objetos e de alto nível<br><br>
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/caue-alves/Linguagem-Jaguar?color=blue">
 </p>
 
-# Funcionamento
+# Working
 
-A linguagem Jaguar é uma linguagem de scripts baseada e interpretada em PHP. O PHP interpreta os arquivos de sufixo `*.jagr` e os traduz em php com base em `replacement`. O objetivo é usar cada vez menos o PHP para que a linguagem se torne cada vez mais independente de qualquer outra
+JaguarLang is a script language php-based. PHP interprets files with `*.jagr` sufix and translate them to php based on `replacement`. The objective is use less and less php for what the language be increasingly independent of any other.
 
-# Variáveis
+# Variables
 
-Uma nova estrutura de variáveis não-baseada em PHP está sendo desenvolvida, onde é criada uma classe `Variable` e suas informações são inseridas no arquivo de sufixo `*.jvls`(**J**aguar **V**ariable **L**ocal **S**torage) 
+A new non-php-based data structure is being developed, where is created a `Variable` class and your info are inserted in the file with `*.jlvs` sufix (**J**aguar **V**ariable **L**ocal **S**torage).
 
-# Exemplos
+# Examples
 
-Seguem alguns exemplos da linguagem:
+There are some language examples:
 ```
 !< Comentário >!
 ```
-Variável Booleana:
+Boolean:
 ```
-var bool_ex = verdadeiro;
-```
-
-Variável string:
-```
-var str_ex = "olá";
-```
-Variável int:
-```
-var int_ex = 123;
+@<bool_ex = @true;
 ```
 
-Variável Float:
+string:
 ```
-var float_ex = 134.67;
+@<str_ex = "olá";
 ```
-Condicional:
+int:
 ```
--se-(var int_ex == 123) {
-	escreva(int_ex . JAGR_EOL);
-} -senao- {
-	escreva('int não encontrado. JAGR_EOL');
+@<int_ex = 123;
+```
+
+float:
+```
+@<float_ex = 134.67;
+```
+Conditional:
+```
+-if-(@<int_ex == 123) {
+	writeLine(int_ex . JAGR_EOL);
+} -else- {
+	writeLine('int não encontrado. JAGR_EOL');
 }
 ```
 
-Classe:
+Class:
 ```
-Classe Mamifero
+Class Mamifero
 {
-	publica funcao _init(var idade)
+	public func _init(@<idade)
 	{
-		var o_mesmo-idade = var idade;
+		this--idade = @<idade;
 	}
 
 	publica funcao vc_anda()
 	{
-		retorne verdadeiro;
+		return @true;
 	}
 }
 ```
-Instanciar classe:
+Instantiate class:
 ```
-var Cachorro = new Mamifero(20);
-escreva(var Cachorro-vc_anda() . JAGR_EOL);
+@<Cachorro = new Mamifero(20);
+writeLine(@<Cachorro--vc_anda() . JAGR_EOL);
 ```
-Tratamento de Erros:
+Exceptions and errors
 ```
-tente {
-	!<...Cógigo>!
-} capture (excecao var e) {
-	escreva("excessão capturada");
+try {
+	!<...Code>!
+} except (Exception @<e) {
+	("catched exception");
 }
 ```
 Laço `foreach`
@@ -89,24 +89,24 @@ para_cada(var array as var a) {
 	escreva(var a);
 }
 ```
-Laço `while`
+`while` loop
 ```
-var bool = falso
-enquanto(var bool == falso) {
-	escreva ("falsooo");
-	if (100 == 100) {
-		var bool = verdadeiro;
+@<bool = @false
+while(var bool == @false) {
+	writeLine ("false!");
+	-if- (100 == 100) {
+		@<bool = @true;
 	}
 }
 ```
 
-# Observação
-Nas variáveis, especificar o tipo não é necessário, apenas usamos os nomes de `str_ex`, `int_ex`, etc, para exemplificar, mas o nome `var` é crucial antes da declaração da variável
+# Note
+On variables, specify the type isn't necessary, we only used the names of `str_ex`, `int_ex` to exemplify, but the name `@<` is essential before the variable value.
 
-# Palavras-Chave
-* `JAGR_EOL`: Fim de linha;
-* `-`: Chamar método de classe;
-* `_init`: Construtor;
-* `-se-`: Condicional;
-* `-senao-`: Realizada se o `-se-` não for cumprido;
-* `enquanto`: Laço equivalente ao `while`.
+# Structures
+* `JAGR_EOL`: Endo of Line;
+* `--`: Class method;
+* `_init`: Constructor;
+* `-if-`: Conditional;
+* `-else-`: Realized if `-if-` don't be confirmed;
+* `while`: while the condition is confirmed all inside will be executed.
