@@ -82,11 +82,11 @@ try {
 	("catched exception");
 }
 ```
-Laço `foreach`
+`foreach` loop
 ```
-var array = [];
-para_cada(var array as var a) {
-	escreva(var a);
+@<array = [];
+foreach(@<array as @<a) {
+	writeLine(@<a);
 }
 ```
 `while` loop
