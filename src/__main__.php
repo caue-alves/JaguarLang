@@ -8,8 +8,9 @@ require_once "replace/funcs.php";
 $arqpath = '../cash/compiled_file.php';
 $arq = fopen($arqpath, 'w');
 
-sanitize_one();
-$str_compilada = sanitize_two("../samples/main.jagr");
+fwrite($arq, '<?php' . PHP_EOL . "require_once('../src/var.php');" . PHP_EOL . "require_once('exceptions/Exception.php');" . "require_once('exceptions/DivisaoPorZero.php');" . PHP_EOL . "try {");
+
+$str_compilada = sanitize("../samples/main.jagr");
 $str_compilada = replace_sym($str_compilada);
 $str_compilada = structs($str_compilada);
 $str_compilada = funcs($str_compilada);
