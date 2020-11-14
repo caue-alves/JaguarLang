@@ -24,7 +24,7 @@ A new non-php-based data structure is being developed, where is created a `Varia
 
 There are some language examples:
 ```
-!< Comentário >!
+!< Comentary >!
 ```
 Boolean:
 ```
